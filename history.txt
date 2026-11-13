@@ -1,0 +1,49 @@
+  305  ls
+  306  mkdir Lab9
+  307  cd Lab9
+  308  gh repo create lab9 --public
+  309  nano validate-data.sh
+  310  bash validate-data.sh "pearse mccarthy" "0831122334"
+  311  nano validate-data.sh
+  312  cat -A validate-data.sh
+  313  nano validate-data.sh 
+  314  bash validate-data.sh "pearse mccarthy" "0831122334"
+  315  bash validate-data.sh "pearse mccarthy" "08311223344"
+  316  bash validate-data.sh "pearseT mccarthy" "08311223344"
+  317  git init
+  318  git add validate-data.sh
+  319  git commit -m "validate-data script created closes #2"
+  320  git push -u origin main
+  321  git branch -M main
+  322  git remote add origin https://github.com/Myrlick/lab9.git
+  323  git push -u origin main
+  324  mkdir .github/workflows
+  325  mkdir -p .github/workflows
+  326  cd .github/workflows
+  327  nano basictests.yml
+  328  cd .. 
+  329  cd ..
+  330  git status
+  331  git add .
+  332  git status
+  333  git commit -m "yaml test script added closes #3"
+  334  git push
+  335  nano validate-data.sh 
+  336  git status
+  337  git switch -C test
+  338  git staus
+  339  git status
+  340  nano validate-data.sh 
+  341  git add .
+  342  git commit -m "changed name length to 20 closes #5"
+  343  git push
+  344  git push --set-upstream origin test
+  345  nano .github/workflows/basictests.yml
+  346  git add .
+  347  git commit -m "fixed the yml script to run on the push to test and main only, not on every push closes #4"
+  348  git push
+  349  history
+  350  history -tail 43
+  351  history 43
+  352  history 48
+  353  history 49 > history.txt

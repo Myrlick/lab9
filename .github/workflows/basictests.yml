@@ -1,6 +1,8 @@
 name: Basic tests
 
-on: [push]
+on:
+  push:
+    [ main, test ]
 
 jobs:
   lab9-basic-tests:
