@@ -1,0 +1,28 @@
+name: Basic tests
+
+on: [push]
+
+jobs:
+  lab9-basic-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Test 1 should PASS
+        run: |
+          result=$(bash validate-data.sh "pearse mccarthy" "0831122334")
+          echo "Got: $result"
+          [ "$result" = "PASS" ]
+
+      - name: Test 2 should FAIL
+        run: |
+          result=$(bash validate-data.sh "pearse mccarthy" "08311223344")
+          echo "Got: $result"
+          [ "$result" = "FAIL" ]
+
+      - name: Test 3 should FAIL
+        run: |
+          result=$(bash validate-data.sh "pearse mccarthyT" "08311223344")
+          echo "Got: $result"
+          [ "$result" = "FAIL" ]
